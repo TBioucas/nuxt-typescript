@@ -1,0 +1,41 @@
+{
+  "[css]": {
+    "editor.formatOnSave": false
+  },
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "[scss]": {
+    "editor.formatOnSave": false
+  },
+  "[vue-html]": {
+    "editor.formatOnSave": false
+  },
+  "[vue]": {
+    "editor.formatOnSave": false
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "editor.formatOnSave": false,
+  "eslint.validate": ["html", "vue", "vue-html", "javascript"],
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
+  "prettier.disableLanguages": [
+    "html",
+    "css",
+    "scss",
+    "vue",
+    "vue-html",
+    "javascript"
+  ],
+  "stylelint.validate": ["html", "css", "scss", "vue", "vue-html"],
+  "vetur.format.defaultFormatter.html": "prettier",
+  "vetur.format.defaultFormatter.js": "prettier-eslint",
+  "vetur.format.defaultFormatter.scss": "prettier",
+  "vetur.validation.template": false
+}
