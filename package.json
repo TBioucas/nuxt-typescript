@@ -7,10 +7,10 @@
     "build": "nuxt-ts build",
     "start": "nuxt-ts start",
     "generate": "nuxt-ts generate",
-    "lint:js": "eslint './src/**/*.{js,vue}' --ignore-path .gitignore .",
-    "lint:js:fix": "eslint './src/**/*.{js,vue}' --fix --ignore-path .gitignore .",
-    "lint:style": "stylelint './src/**/*.{css,scss,vue}' --ignore-path .gitignore .",
-    "lint:style:fix": "stylelint './src/**/*.{css,scss,vue}' -fix --ignore-path .gitignore .",
+    "lint:js": "eslint '**/*.{vue,js,ts}' --ignore-path .gitignore",
+    "lint:js:fix": "eslint '**/*.{vue,js,ts}' --fix --ignore-path .gitignore",
+    "lint:style": "stylelint **/*.{vue,css,scss} --ignore-path .gitignore",
+    "lint:style:fix": "stylelint **/*.{vue,css,scss} --fix --ignore-path .gitignore",
     "lint": "npm run lint:js && npm run lint:style",
     "lint:fix": "npm run lint:js:fix && npm run lint:style:fix",
     "version": "echo $npm_package_version"
@@ -52,12 +52,12 @@
     ]
   },
   "lint-staged": {
-    "*.{js,vue}": [
-      "eslint './src/**/*.{js,vue}' --fix --ignore-path .gitignore .",
+    "*.{js,vue,ts}": [
+      "npm run lint:js:fix",
       "git add"
     ],
     "*.{css,scss,vue}": [
-      "stylelint './src/**/*.{css,scss,vue}' -fix --ignore-path .gitignore .",
+      "npm run lint:style:fix",
       "git add"
     ]
   },
