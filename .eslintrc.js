@@ -3,16 +3,18 @@ module.exports = {
   env: {
     browser: true,
     node: true,
+    es6: true,
   },
+  plugins: ['prettier'],
   extends: [
     '@nuxtjs/eslint-config-typescript',
     'plugin:vue/recommended',
     'plugin:nuxt/recommended',
+    'plugin:prettier/recommended',
     'prettier',
     'prettier/vue',
-    'plugin:prettier/recommended',
+    'prettier/@typescript-eslint',
   ],
-  plugins: ['prettier'],
   rules: {
     'prettier/prettier': 'error',
     'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
@@ -25,4 +27,4 @@ module.exports = {
   globals: {
     $nuxt: true,
   },
-}
+};
