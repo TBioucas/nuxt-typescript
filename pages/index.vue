@@ -2,6 +2,7 @@
   <div class="container">
     <div>
       <Logo />
+      <Name />
       <h1 class="title">typescript</h1>
       <div class="links">
         <a
@@ -31,7 +32,7 @@ import Vue from 'vue';
 export default Vue.extend({
   methods: {
     helloWorld(): string {
-      return 'tiago';
+      return 'helloWord';
     },
   },
 });
